@@ -23,4 +23,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Printing Custom Message
-        run: echo "${{workflow_dispatch.custom_message}}"
+        run: echo "${{github.event.workflow.custom_message}}"
