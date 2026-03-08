@@ -24,3 +24,7 @@ jobs:
     steps:
       - name: Printing Custom Message
         run: echo "${{github.event.workflow.custom_message}}"
+
+      - name: Printing run-job boolean value
+        if: inputs.run_job
+        run: echo "Input of run_job is ${{inputs.run_job}}"
